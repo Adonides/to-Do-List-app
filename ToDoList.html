@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;900&display=swap" rel="stylesheet">
+    <title>My to Do Lists</title>
+    <link rel="stylesheet" href="ToDoList.css">
+    <script defer src="ToDoList.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="brand-logo">
+                <p>
+                    <img src="./images/logo-32x32.png" alt="Logo"> WeB.ProJEct$
+                </p>
+            </div>
+            <a href="#" class="toggle-btn" onclick="toggleButton()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="#about" rel="next">About</a></li>
+              
+                    <li><a href="#contact" rel="next">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1 class="title">My to Do Lists</h1>
+    </header>
+    <!--DOLIST---------------------------------------------------->
+    <main>
+        <div class="main-body">
+            <div class="todo">
+                <h2 class="task-title">My lists</h2>
+                <ul id="lists-holder" class="task-list" >
+                    
+                </ul>
+                <form action="" id="list-form">
+                    <input type="text" id="list-input" class="new list" placeholder=" Write a new list" aria-label="new list name">
+                    <button class="btn" aria-label="create new list">+</button>
+                </form>
+            </div>
+    
+            <div id="display-holder" class="todo-list">
+
+                <div class="todo-header">
+                    <h2 id="list-title" class="todo-title">Projects</h2>
+                    <p id="task-count" class="task-count">3 tasks remaining</p>
+                </div>
+    
+                <div class="todo-body">
+    
+                    <div id="tasks" class="tasks"></div>
+    
+    
+                    <div class="new-task-creater">
+                        <form id="task-form" action="">
+                            <input id="task-input" type="text" class="new" placeholder=" Write a new task" aria-label="new task name">
+                            <button class="btn" aria-label="create new task">+</button>
+                        </form>
+                    </div>
+    
+                    <div class="delete">
+                        <button onclick="btnDeleteTask()" id="delete-task" class="btn-delete">Delete task</button>
+                        <button onclick="btnDelete()" id="deleteList" class="btn-delete">Delete all list</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <section id="about"> 
+
+        </section>
+        <section id="Contact">
+
+        </section>
+    </main>
+    <template id="task-template">
+        <div class="task">
+            <input type="checkbox" >
+            <label >  
+                <span class="custom-checkbox"></span>
+            </label> 
+        </div>
+    </template>
+    <!--FOOTER---------------------------------------------------->
+    <footer><p>&copy;WeB.ProJEct$</p></footer>
+</body>
+</html>
+
+
